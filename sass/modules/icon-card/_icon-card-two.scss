@@ -1,0 +1,32 @@
+
+.icon-card {
+   &.style-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+
+    .icon-card-inner {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        position: relative;
+        .icon i {
+            font-size: 65px;
+            color: $blue-color;
+        }
+    }
+    .content{
+        @include md{
+            gap: 0;
+        }
+    }
+    .image {
+        width: 65px;
+        height: 65px;
+        flex-shrink: 0;
+    }   
+   }
+}
+
+

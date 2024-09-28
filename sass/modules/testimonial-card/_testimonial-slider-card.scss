@@ -1,0 +1,191 @@
+.slider-area-wrapper {
+  &.style-1 {
+    margin-right: -9999px;
+
+    @include lg {
+      margin-right: unset;
+    }
+    @include md {
+      margin-right: unset;
+    }
+    @include sm {
+      margin-right: unset;
+    }
+
+    .testimonial-slider-wrapper{
+
+      button.info-card-arrow-btn.next-btn.slick-arrow {
+        position: absolute;
+        left: -440px;
+        top: 260px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        font-size: 16px;
+        background: rgba(217, 161, 76, 0.1);
+        color: #D9A14C;
+        border: none;
+        transition: all 0.5s ease-out;
+        @include lg{
+          left: -400px;
+        }
+        @include xl{
+          left: -380px;
+        }
+        &:hover{
+          background:#D9A14C;
+          color: #fff;
+        }
+      }
+
+      button.info-card-arrow-btn.prev-btn.slick-arrow {
+        position: absolute;
+        left: -360px;
+        top: 260px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        font-size: 16px;
+        border: none;
+        background: rgba(217, 161, 76, 0.1);
+        color: #D9A14C;
+        transition: all 0.5s ease-out;
+        @include lg{
+          left: -320px;
+        }
+        @include xl{
+          left: -300px;
+        }
+        &:hover{
+          background: #D9A14C;
+          color: #fff;
+        }
+      }
+  
+      .slick-item{
+        margin: 0 15px;
+        @include sm{
+          margin: 0 4px;
+        }
+      }
+    }
+  }
+
+}
+
+// // Testimonial Slider Arrow hidden
+// .testimonial-slider-wrapper{
+
+//   }
+
+// Testimonial Slider Dots
+.testimonial-slider-wrapper {
+  &.style-4 {
+
+    .slick-list {
+      overflow: visible !important;
+    }
+
+      .slick-item {
+        &.slick-center {
+          transform: translateY(-40px);
+          @include transition;
+          @include rmaxwd(991){
+             margin-top: 0;
+          }
+        }
+
+        margin-top: 0;
+        @include transition;
+      }
+  }
+
+  &.style-5 {
+    .slick-list {
+      overflow: visible !important;
+      
+      @include sm{
+        overflow: hidden !important;
+      }
+    }
+  }
+}
+
+// Slick dots style
+
+.slider-area-wrapper.style-1{
+  .slick-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0 0;
+    position: absolute;
+}
+}
+.slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0 0;
+  @include sm{
+    padding-left: 0;
+  }
+  li {
+    list-style: none;
+    line-height: 0;
+
+    &:first-child {
+      button {
+        border-radius: 40px 0 0 40px;
+      }
+    }
+    &:last-child {
+      button {
+        border-radius: 0 40px 40px 0;
+      }
+    }
+    &.slick-active {
+      button {
+        width: 105px;
+        @include transition;
+
+        &:before {
+          width: 100%;
+          visibility: visible;
+          @include transition;
+        }
+
+      }
+    }
+
+    button {
+      width: 65px;
+      font-size: 0;
+      line-height: 0;
+      padding: 0;
+      background-color: $gray-200;
+      height: 11px;
+      @include transition;
+      @include sm{
+        width: 55px;
+      }
+      position: relative;
+
+      &:before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background-color: $primary-color;
+        visibility: hidden;
+        @include transition;
+        border-radius: 40px;
+      }
+    }
+  }
+}
+
+
+

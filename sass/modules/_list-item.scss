@@ -1,0 +1,46 @@
+.list-item-wrapper ul {
+    padding: 0;
+  li {
+    display: flex;
+    align-items: start;
+    gap: 10px;
+    color: #23262d;
+    padding: 0;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 0;
+    .wrapper-icon i{
+        font-size: 15px;
+        color: $primary-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        border-radius: 50%;
+    }
+    .wrapper-text{
+        font-size: 16px;
+        font-weight: 400;
+        line-height: initial;
+        margin-bottom: 0;
+        color: $text-color;
+    }
+
+    @include sm {
+      gap: 10px;
+    }
+    .list-item {
+      display: flex;
+      gap: 15px;
+      flex-wrap: nowrap;
+      align-items: center;
+      &.style-two {
+        gap: 10px;
+        .icon {
+          font-size: 8px;
+        }
+      }
+    }
+  }
+}
